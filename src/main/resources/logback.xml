@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="false">
+
+<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+	<encoder>
+		<pattern>
+			%d{yyyy-MM-dd HH:mm} %-5level %class{36} - %msg%n
+		</pattern>
+	</encoder>
+</appender>
+
+<appender name="STDOUT_SELF" class="ch.qos.logback.core.ConsoleAppender">
+	<encoder>
+		<pattern>
+			%d{yyyy-MM-dd HH:mm} %-5level %class{36}.%M\(%line\) - %msg%n
+		</pattern>
+	</encoder>
+</appender>
+
+<!--<logger name="com.dz" level="DEBUG" additivity="false">-->
+<!--<appender-ref ref="STDOUT_SELF"/>-->
+<!--</logger>-->
+
+<root level="DEBUG">
+	<appender-ref ref="STDOUT"/>
+</root>
+
+</configuration>
